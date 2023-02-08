@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Calculadora</h2>
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" id="display" disabled>
+        </div>
+        <div class="form-group">
+          <input type="button" class="btn btn-default" value="1" onclick="document.getElementById('display').value+='1'">
+          <input type="button" class="btn btn-default" value="2" onclick="document.getElementById('display').value+='2'">
+          <input type="button" class="btn btn-default" value="3" onclick="document.getElementById('display').value+='3'">
+          <input type="button" class="btn btn-default" value="+" onclick="document.getElementById('display').value+='+'">
+        </div>
+        <div class="form-group">
+          <input type="button" class="btn btn-default" value="4" onclick="document.getElementById('display').value+='4'">
+          <input type="button" class="btn btn-default" value="5" onclick="document.getElementById('display').value+='5'">
+          <input type="button" class="btn btn-default" value="6" onclick="document.getElementById('display').value+='6'">
+          <input type="button" class="btn btn-default" value="-" onclick="document.getElementById('display').value+='-'">
+        </div>
+        <div class="form-group">
+          <input type="button" class="btn btn-default" value="7" onclick="document.getElementById('display').value+='7'">
+          <input type="button" class="btn btn-default" value="8" onclick="document.getElementById('display').value+='8'">
+          <input type="button" class="btn btn-default" value="9" onclick="document.getElementById('display').value+='9'">
+          <input type="button" class="btn btn-default" value="*" onclick="document.getElementById('display').value+='*'">
+        </div>
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Calculadora</h1>
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" id="result" disabled>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="expression">
+        </div>
+        <div class="form-group text-center">
+          <button type="button" class="btn btn-primary" id="clear">Clear</button>
+          <button type="button" class="btn btn-primary" id="evaluate">Evaluar</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      const clear = document.getElementById("clear");
+      const evaluate = document.getElementById("evaluate");
+      const expression = document.getElementById("expression");
+      const result = document.getElementById("result");
+
+      clear.addEventListener("click", () => {
+        expression.value = "";
+        result.value = "";
+      });
+
+      evaluate.addEventListener("click", () => {
+        try {
+          result.value = eval(expression.value);
+        } catch (e) {
+          result.value = "Error";
+        }
+      });
+    </script>
+  </body>
+</html>
