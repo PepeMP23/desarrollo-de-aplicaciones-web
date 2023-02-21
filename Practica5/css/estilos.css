@@ -5,3 +5,8 @@ body{
 h1{
     font-size: 40px;
 }
+
+.box{
+    inline-size: 250px;
+    overflow-wrap:break-word;
+}
