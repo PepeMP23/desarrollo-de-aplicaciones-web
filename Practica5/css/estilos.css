@@ -7,6 +7,5 @@ h1{
 }
 
 .box{
-    inline-size: 250px;
-    overflow-wrap:break-word;
+    word-wrap: break-word;
 }
