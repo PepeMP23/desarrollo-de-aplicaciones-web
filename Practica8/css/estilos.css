@@ -1,0 +1,28 @@
+:root{
+    --azul: #1e90ff;
+    --blanco: #ffffff;
+    --tamanoLetra: 30px;
+}
+
+body {
+    background-color: var(--azul);
+}
+  
+h2 {
+    border-bottom: 2px solid var(--azul);
+    font-size: var(--tamanoLetra);
+}
+  
+.container {
+    color: var(--azul);
+    background-color: var(--blanco);
+    padding: 15px;
+}
+  
+button {
+    background-color: var(--blanco);
+    color: var(--azul);
+    border: 1px solid var(--azul);
+    padding: 5px;
+    font-size: var(--tamanoLetra);
+}
