@@ -54,3 +54,39 @@ for(let cantante of cantantes){
 html += "</ul>"
 
 lista.innerHTML = html;
+
+let arreglo = [1, 2, 3];
+
+arreglo[6] = 9;
+console.log(arreglo[1]);
+console.log(arreglo);
+
+const frutas = ["Banana", "Orange", "Apple", "Mango"];
+frutas.sort();
+console.log(frutas);
+
+const numeros = [33, 2, 8];
+numeros.sort();
+console.log(numeros);
+
+var apellido = "Pérez";
+// ambito global
+
+let muestraApellido = () => {
+    let apellido = "González";
+    let rfc = "hrt12345";
+    console.log("Dentro de la función: " + apellido);
+}
+
+console.log("Fuera de la función: " + apellido);
+
+muestraApellido();
+
+const PI = 3.1416;
+
+let pais = "MX";
+
+// Función anónima
+(() => {
+    console.log(pais);
+})();
