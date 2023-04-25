@@ -1,0 +1,1 @@
+const edad = document.getElementById('edad');
