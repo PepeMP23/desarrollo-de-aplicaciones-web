@@ -1,0 +1,18 @@
+.btn-buscar {
+    background-color: #1DB954;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 12px 24px;
+}
+  
+.btn-buscar:hover {
+    background-color: #1DB954;
+    color: rgba(255, 255, 255, 0.7);
+}
