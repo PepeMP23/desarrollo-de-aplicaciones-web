@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS</title>
+</head>
+<body>
+    <div id="miApp">
+        <ul v-for="{nombre, author} in canciones" :key="author">
+            <li> {{ nombre }} - {{ author }} </li>
+        </ul>
+
+        <!-- 
+        <ul v-for="frase in frases" :key="frases.id">
+            <li>
+                {{ frase.id }} - {{ frase.texto }}
+            </li>
+        </ul>
+        <hr>
+        <ul v-for="(frase, index) in frases" :key="frases.id">
+            <li>
+                {{ index }} {{ frase.id }} - {{ frase.texto }}
+            </li>
+        </ul>
+        <hr>
+        <ul v-for="({id, texto}, index) in frases" :key="id">
+            <li>
+                {{ index }} {{ id }} - {{ texto }}
+            </li>
+        </ul>
+        -->
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
