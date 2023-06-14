@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="shortcut icon" href="spotify.png"/>
+
+  <!--CDN of Vue.js.-->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css"/>
+
+  <title>Spotify</title>
+</head>
+
+<body>
+  <div id="app">
+    <!--Title.-->
+    <h1>Buscar artista en Spotify</h1>
+
+    <form @submit.prevent>
+      <!--Fields.-->
+      <label for="name">Nombre del artista:</label>
+      <input id="name" type="text" v-model="name" required />
+
+      <!--Submit.-->
+      <button type="submit" @click="submit">Buscar</button>
+    </form>
+
+    <!--Info.-->
+    <article v-if="artist.name">
+      <p><strong>Nombre:</strong> {{artist.name}}</p>
+      <p><strong>Álbum:</strong> {{album.name}}</p>
+      <img :src="albumUrl" alt="Album image" />
+
+      <div v-for="song in songs">
+        <p>{{song.name}}</p>
+        <audio controls>
+          <source :src="song.preview_url" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </article>
+  </div>
+
+  <script src="js/app.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+
+</html>
